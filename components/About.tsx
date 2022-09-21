@@ -7,40 +7,37 @@ type Props = {}
 
 export default function About({}: Props) {
   return (
-    <motion.div
-        initial={{ opacity: 0}}
+    <motion.div 
+        initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
-        className='flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'
-    >
-        <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
+        className='flex flex-col relative my-64 h-screen text-center md:text-left md:flex-row max-w-7xl px-4 justify-center mx-auto items-center'>
+        <h3 className='sectionTitle'>
             About
         </h3>
-
         <motion.div
             initial={{
-                x: -200,
+                y: 200,
                 opacity: 0
             }}
-            whileInView={{ opacity: 1, x: 0}}
+            whileInView={{ opacity: 1, y: 0}}
             // viewport={{ once: true }}
             transition={{
                 duration: 1.2
             }}
-            className='relative flex-shrink-0 pt-40 pb-10'
+            className='relative flex-shrink-0 pb-10 mt-24'
         >
-
             <Image 
                 src={dai}
                 alt="Matthew in Hokkaido"
                 width={144}
                 height={144}
-                className='object-cover mx-auto -mb-20 md:mb-0 w-[40px] h-[64px] rounded-full'
+                className='object-cover mx-auto -b-20 md:mb-0 rounded-full snap-center'
             />
         </motion.div>
-        <div className='space-y-10 px-0 md:px-10 h-full'>
+        <div className='space-y-10 px-0 md:px-10 relative'>
             <h4 className='text-4xl font-semibold'>
-                Here is a{" "}<span className='underline decoration-[#F7AB0A]/50'>bit</span>{" "}about me
+                A{" "}<span className='underline decoration-[#F7AB0A]/50'>little</span>{" "}about me
             </h4>
             <p className='text-base'>
             It is nice to meet you. My name is Matthew and I am an aspiring full-stack developer.
@@ -51,5 +48,6 @@ export default function About({}: Props) {
             </p>
         </div>
     </motion.div>
+
   )
 }

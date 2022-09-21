@@ -3,8 +3,32 @@
 @tailwind components;
 
 @layer components {
+  .hero {
+    @apply h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden;
+  }
   .heroBtn {
-    @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-sm tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A] hover:text-[#F7AB0A]/40;
+    @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-sm tracking-widest text-gray-500 bg-black/20 transition-all hover:border-[#55B4F3] hover:text-[#55B4F3]/40;
+  }
+  .heroLinks {
+    @apply pt-8 grid grid-cols-2 md:grid-cols-4 w-full lg:grid-cols-8 gap-1 justify-center items-center;
+  }
+  .expLogo {
+    @apply object-cover rounded-full object-center xl:w-[200px] xl:h-[200px];
+  }
+  .exp {
+    @apply h-screen flex relative overflow-hidden flex-col md:text-left md:flex-row max-w-full px-10 justify-evenly mx-auto items-center snap-center;
+  }
+  .expCard {
+    @apply flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden;
+  }
+  .expCardList {
+    @apply w-full top-32 absolute flex space-x-5 overflow-x-scroll p-8 snap-x snap-mandatory;
+  }
+  .keyLearnings {
+    @apply list-disc space-y-4 ml-5 text-lg;
+  }
+  .sectionTitle {
+    @apply absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl;
   }
 }
 
