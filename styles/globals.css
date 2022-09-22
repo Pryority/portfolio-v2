@@ -28,7 +28,19 @@
     @apply list-disc space-y-4 ml-5 text-lg;
   }
   .sectionTitle {
-    @apply absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl;
+    @apply absolute ml-4 justify-center top-24 text-center uppercase tracking-[20px] text-gray-500 text-2xl;
+  }
+  .vwrap {
+    @apply flex flex-col h-screen relative overflow-hidden text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0;
+  }
+  .fullImg {
+    @apply object-fill object-center xl:w-[200px] xl:h-[200px];
+  }
+  .project {
+    @apply w-screen relative flex-shrink-0 snap-center text-white flex flex-col space-y-5 items-center justify-between p-32 md:p-44 h-full;
+  }
+  .ul-gr {
+    @apply bg-gradient-to-r from-lime-400 via-teal-500 to-lime-500 bg-[length:100%_1.62px] bg-no-repeat bg-bottom;
   }
 }
 

@@ -22,8 +22,8 @@ export default function ExpCard({}: Props) {
             />
         </motion.div>
         <div className='px-0 md:px-10'>
-            <h4 className='text-4xl font-light'>POSITION OF COMPANY</h4>
-            <p className='font-bold text-2xl mt-1'>COMPANY NAME</p>
+            <h4 className='text-center text-2xl md:text-4xl font-light'>POSITION OF COMPANY</h4>
+            <p className='text-center font-bold text-lg md:text-2xl mt-1'>COMPANY NAME</p>
             <div className='flex space-x-2 my-2 justify-center'>
                 {/* logo */}
                 <div className='h-10 w-10 rounded-full bg-red-600'/>
