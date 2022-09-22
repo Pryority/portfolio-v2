@@ -3,6 +3,9 @@
 @tailwind components;
 
 @layer components {
+  .p-dark {
+    @apply bg-[rgb(36,36,36)];
+  }
   .hero {
     @apply h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden;
   }
@@ -19,10 +22,10 @@
     @apply h-screen flex relative overflow-hidden flex-col md:text-left md:flex-row max-w-full px-10 justify-evenly mx-auto items-center snap-center;
   }
   .expCard {
-    @apply flex flex-col rounded-lg items-center space-y-8 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden;
+    @apply flex flex-col rounded-lg items-center space-y-8 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 lg:hover:opacity-100 lg:opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden;
   }
   .expCardList {
-    @apply w-full top-32  flex space-x-5 overflow-x-scroll p-8 snap-x snap-mandatory;
+    @apply w-full pt-48 h-screen no-scroll flex space-x-5 overflow-x-scroll p-8 snap-x snap-mandatory;
   }
   .keyLearnings {
     @apply list-disc space-y-2 ml-5 text-lg;
@@ -40,10 +43,13 @@
     @apply w-screen relative flex-shrink-0 snap-center text-white flex flex-col space-y-5 items-center justify-between p-32 md:p-44 h-full;
   }
   .ul-gr {
-    @apply bg-gradient-to-r from-lime-400 via-teal-500 to-lime-500 bg-[length:100%_1.62px] bg-no-repeat bg-bottom;
+    @apply bg-gradient-to-r from-lime-400 via-teal-500 to-blue-500 bg-[length:100%_1.62px] bg-no-repeat bg-bottom;
+  }
+  .ul-gr-2 {
+    @apply bg-gradient-to-r from-teal-400 via-lime-500 to-lime-500 bg-[length:100%_1.62px] bg-no-repeat bg-bottom;
   }
   .skill-wrapper {
-    @apply h-24 w-24 md:w-28 md:h-28 lg:w-32 lg:h-32 filter group-hover:grayscale transition duration-200 ease-in-out flex cursor-pointer rounded-full relative;
+    @apply h-24 w-24 md:w-28 md:h-28 filter group-hover:grayscale transition duration-200 ease-in-out flex cursor-pointer rounded-full relative;
   }
   .skill-circle {
     @apply absolute object-cover;
@@ -52,7 +58,7 @@
     @apply text-3xl md:text-4xl font-semibold text-center;
   }
   .contact-input {
-    @apply outline-none bg-slate-400/10 rounded-sm border-b px-4 py-2 md:px-6 md:py-4 border-[#242424] text-gray-400 transition-all;
+    @apply outline-none bg-slate-400/10 rounded-sm border-b px-4 py-2 md:px-6 md:py-4 border-[#242424] text-gray-400 transition-all focus:border-lime-500/40 focus:text-lime-500 hover:border-lime-500 justify-center items-center text-start w-full;
   }
 }
 

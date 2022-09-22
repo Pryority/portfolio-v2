@@ -13,12 +13,12 @@ export default function ExpCard({}: Props) {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.2 }}
             viewport={{ once: true }}
-            className='relative w-[144px] h-[144px] rounded-full xl:w-[200px] xl:h-[200px]'
+            className='relative w-[144px] h-[88px] xl:w-[200px] xl:h-[200px]'
         >
             <Image src={plc}
                 alt="Picture of the author"
                 layout='fill'
-                className='absolute object-cover object-center rounded-full'
+                className='absolute object-cover object-center rounded-xl'
             />
         </motion.div>
         <div className='px-0 md:px-10 flex flex-col space-y-4'>
