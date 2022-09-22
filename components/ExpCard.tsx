@@ -13,17 +13,19 @@ export default function ExpCard({}: Props) {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.2 }}
             viewport={{ once: true }}
+            className='relative w-[144px] h-[144px] rounded-full xl:w-[200px] xl:h-[200px]'
         >
             <Image src={plc}
                 alt="Picture of the author"
-                width="144px"
-                height="144px"
-                className='expLogo'
+                layout='fill'
+                className='absolute object-cover object-center rounded-full'
             />
         </motion.div>
-        <div className='px-0 md:px-10'>
-            <h4 className='text-center text-2xl md:text-4xl font-light'>POSITION OF COMPANY</h4>
-            <p className='text-center font-bold text-lg md:text-2xl mt-1'>COMPANY NAME</p>
+        <div className='px-0 md:px-10 flex flex-col space-y-4'>
+            <div className='flex flex-col'>
+                <h4 className='text-center text-2xl md:text-4xl font-light'>POSITION OF COMPANY</h4>
+                <p className='text-center font-bold text-lg md:text-2xl mt-1'>COMPANY NAME</p>
+            </div>
             <div className='flex space-x-2 my-2 justify-center'>
                 {/* logo */}
                 <div className='h-10 w-10 rounded-full bg-red-600'/>
@@ -31,7 +33,10 @@ export default function ExpCard({}: Props) {
                 <div className='h-10 w-10 rounded-full bg-red-600'/>
                 <div className='h-10 w-10 rounded-full bg-red-600'/>
             </div>
-            <p className='uppercase space-y-5 ml-5'>Started work...Ended: ...</p>
+            <div className='grid md:grid-cols-2'>
+                <p className='uppercase text-center space-y-5 ml-5'>Started - {'03/04/2020'}</p>
+                <p className='uppercase text-center space-y-5 ml-5'>Ended - {'07/16/2020'}</p>
+            </div>
             <ul className='keyLearnings'>
                     <li>key learnings key learnings key learnings </li>
                     <li>key learnings key learnings key learnings </li>
