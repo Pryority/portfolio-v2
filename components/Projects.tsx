@@ -18,7 +18,7 @@ export default function Projects({}: Props) {
                     transition={{ duration: 1.2 }}
                     viewport={{ once: true }}
                     key={i} 
-                    className='flex flex-col w-screen flex-shrink-0 snap-center space-y-5 items-center justify-center p-8 md:p-44 h-screen'>
+                    className='flex flex-col w-screen flex-shrink-0 snap-center space-y-5 items-center justify-center p-8 md:p-32 h-screen'>
                     <motion.div
                         initial={{ opacity: 0, y: 100 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -33,14 +33,14 @@ export default function Projects({}: Props) {
                             className='fullImg'
                             />
                     </motion.div>
-                    <div className='space-y-4 md:space-y-8 px-0 md:px-12 max-w-xl'>
+                    <div className='space-y-4 md:space-y-8 px-0 max-w-xl'>
                         <h4 className='text-2xl md:text-4xl font-semibold text-center'> 
                             <span className='ul-gr'>
                                 Case Study {i + 1} of {projects.length}:
                             </span>{" "}
                             Athleague
                         </h4>
-                        <p className='text-sm tracking-wide md:text-lg text-center md:text-left'>
+                        <p className='text-sm tracking-wide md:leading-5 md:text-md text-center md:text-left md:px-10'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates fuga, reiciendis obcaecati sequi nobis impedit ipsa autem ut. Dolor velit repellat assumenda aut, delectus mollitia placeat maxime error aperiam aspernatur vero officia nesciunt, nobis nemo minus odit at quas excepturi iure, quae incidunt architecto quasi amet accusamus. Aperiam, nihil modi!
                         </p>
                     </div>
