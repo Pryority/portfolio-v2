@@ -22,7 +22,7 @@
     @apply flex flex-col rounded-lg items-center space-y-8 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden;
   }
   .expCardList {
-    @apply w-full top-32 absolute flex space-x-5 overflow-x-scroll p-8 snap-x snap-mandatory;
+    @apply w-full top-32  flex space-x-5 overflow-x-scroll p-8 snap-x snap-mandatory;
   }
   .keyLearnings {
     @apply list-disc space-y-2 ml-5 text-lg;
@@ -47,6 +47,12 @@
   }
   .skill-circle {
     @apply absolute object-cover;
+  }
+  .pr-t-lg {
+    @apply text-3xl md:text-4xl font-semibold text-center;
+  }
+  .contact-input {
+    @apply outline-none bg-slate-400/10 rounded-sm border-b px-4 py-2 md:px-6 md:py-4 border-[#242424] text-gray-400 transition-all;
   }
 }
 
@@ -75,4 +81,15 @@ a {
     color: white;
     background: black;
   }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

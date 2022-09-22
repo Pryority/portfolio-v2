@@ -6,21 +6,23 @@ type Props = {}
 
 export default function Experience({}: Props) {
   return (
-    <motion.div 
+    <div className='vwrap'>
+        <h3 className='sectionTitle'>
+            Experience
+        </h3>
+        <motion.div 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
         className='exp'>
-        <h3 className='sectionTitle'>
-            Experience
-        </h3>
-        
         <div className='expCardList'>
             <ExpCard />
             <ExpCard />
             <ExpCard />
             <ExpCard />
         </div>
-    </motion.div>
+      </motion.div>
+    </div>
+      
   )
 }

@@ -10,7 +10,7 @@ export default function Projects({}: Props) {
     return (
     <div className='vwrap'>
         <h3 className='sectionTitle'>Projects</h3>
-        <div className='w-screen flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20'>
+        <div className='w-screen flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 no-scroll'>
             {projects.map((project, i )=> (
                 <motion.div 
                     initial={{ opacity: 0 }}
