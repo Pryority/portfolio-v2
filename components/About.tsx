@@ -38,9 +38,9 @@ export default function About({}: Props) {
             </motion.div>
             <div className='space-y-8 px-0 md:px-10 items-center md:items-start justify-start flex flex-col h-full md:h-fit'>
                 <h4 className='text-4xl font-semibold'>
-                    A{" "}<span className='underline decoration-[#F7AB0A]/50'>little</span>{" "}bit about me
+                    A{" "}<span className='ul-gr-2'>little</span>{" "}bit about me
                 </h4>
-                <div className='text-[16px] leading-[1.58] md:text-left tracking-wide flex flex-col space-y-2 overflow overflow-y-scroll h-3/5 mx-3'>
+                <div className='text-[16px] leading-[1.58] md:text-left tracking-wide flex flex-col space-y-2 overflow-y-scroll h-[224px] no-scroll mx-3'>
                     <p>
                     It is nice to meet you. 
                     </p>

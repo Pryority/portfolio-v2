@@ -20,11 +20,11 @@ export default function Contact({}: Props) {
     return (
     <div className='vwrap'>
         <h3 className='sectionTitle'>Contact</h3>
-        <motion.div 
+        <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.62 }}
-            className='flex flex-col space-y-10 pt-16 md:pt-32 justify-center items-center'>
+            className='flex flex-col space-y-10 pt-16 lg:24 justify-center items-center'>
             <motion.div 
             initial={{ y: -25, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}

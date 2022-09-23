@@ -25,14 +25,11 @@
     @apply flex flex-col rounded-lg justify-between items-center space-y-8 flex-shrink-0 md:w-[500px] snap-center bg-[#292929] py-8 lg:hover:opacity-100 lg:opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden;
   }
   .expCardList {
-    @apply w-full pt-48 h-screen no-scroll flex space-x-5 overflow-x-scroll p-4 snap-x snap-mandatory;
+    @apply w-full p-8 mx-8 pt-48 h-[800px] md:h-[700px] flex space-x-5 overflow-x-scroll snap-x snap-mandatory scrollbar-thin md:scrollbar-track-gray-400/20 md:scrollbar-thumb-lime-800/80;
   }
   .keyLearnings {
-    @apply list-disc space-y-[1.62px] ml-5 text-sm overflow-y-scroll;
+    @apply list-disc space-y-[1.62px] ml-5 text-sm overflow-y-scroll no-scroll;
   }
-  /* .keyL {
-    @apply h-[80px];
-  } */
   .sectionTitle {
     @apply absolute ml-4 justify-center top-24 text-center uppercase tracking-[20px] text-gray-500 text-2xl;
   }
