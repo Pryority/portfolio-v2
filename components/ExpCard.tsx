@@ -8,12 +8,13 @@ type Props = {}
 export default function ExpCard({}: Props) {
   return (
     <article className='expCard'>
+        <div className='flex flex-col items-center space-y-4'>
         <motion.div
             initial={{ y: -100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.2 }}
             viewport={{ once: true }}
-            className='relative w-[144px] h-[88px] xl:w-[200px] xl:h-[200px]'
+            className='relative w-[144px] h-[88px] xl:w-[192px] xl:h-[104px]'
         >
             <Image src={plc}
                 alt="Picture of the author"
@@ -37,14 +38,15 @@ export default function ExpCard({}: Props) {
                 <p className='uppercase text-center space-y-5 ml-5'>Started - {'03/04/2020'}</p>
                 <p className='uppercase text-center space-y-5 ml-5'>Ended - {'07/16/2020'}</p>
             </div>
-            <ul className='keyLearnings'>
-                    <li>key learnings key learnings key learnings </li>
-                    <li>key learnings key learnings key learnings </li>
-                    <li>key learnings key learnings key learnings </li>
-                    <li>key learnings key learnings key learnings </li>
-                    <li>key learnings key learnings key learnings </li>
-                    <li>key learnings key learnings key learnings </li>
+            <ul className='keyLearnings h-full justify-center'>
+                    <li className='keyL'>key learnings key learnings key learnings </li>
+                    <li className='keyL'>key learnings key learnings key learnings </li>
+                    <li className='keyL'>key learnings key learnings key learnings </li>
+                    <li className='keyL'>key learnings key learnings key learnings </li>
+                    <li className='keyL'>key learnings key learnings key learnings </li>
+                    <li className='keyL'>key learnings key learnings key learnings </li>
                 </ul>
+        </div>
         </div>
     </article>
   )
