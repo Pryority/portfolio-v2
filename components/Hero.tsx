@@ -4,10 +4,13 @@ import Image from 'next/image'
 import headshot from '../assets/matt.jpg'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircles from './BackgroundCircles'
+import { PageInfo } from '../typings'
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo
+}
 
-export default function Hero({}: Props) {
+export default function Hero({pageInfo}: Props) {
     const [text, count] = useTypewriter({
         words: [
             "Yo!",
@@ -40,14 +43,14 @@ export default function Hero({}: Props) {
                 <Link href='#about'>
                     <button className='heroBtn lg:col-span-2'>About</button>
                 </Link>
-                <Link href='#experience'>
-                    <button className='heroBtn lg:col-span-2'>Experience</button>
+                <Link href='#projects'>
+                    <button className='heroBtn lg:col-span-2 '>Projects</button>
                 </Link>
                 <Link href='#skills'>
                     <button className='heroBtn lg:col-span-2'>Skills</button>
                 </Link>
-                <Link href='#projects'>
-                    <button className='heroBtn lg:col-span-2 '>Projects</button>
+                <Link href='#experience'>
+                    <button className='heroBtn lg:col-span-2'>Experience</button>
                 </Link>
             </div>
         </div>

@@ -1,12 +1,25 @@
 import React from 'react'
-import Image from 'next/image'
+import Img from 'next/image'
 import { motion } from 'framer-motion'
-const plc ='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png'
+import { Image, Skill } from '../typings'
+import { urlFor } from '../sanity'
 
-type Props = {}
+type Props = {
+    jobTitle: string;
+    company: string;
+    companyImage: Image;
+    dateStarted: Date;
+    dateEnded: Date;
+    keyLearnings: string[];
+    skills: Skill[];
+}
 
-export default function ExpCard({}: Props) {
-  return (
+export default function ExpCard(
+        {jobTitle, company, companyImage, dateStarted, dateEnded, keyLearnings, skills }: Props
+    ) {
+        // CURRENTLY UNDEFINED 
+        console.log('IMAGE ========', skills)
+    return (
     <article className='expCard'>
         <div className='flex flex-col items-center space-y-4'>
         <motion.div
@@ -16,7 +29,8 @@ export default function ExpCard({}: Props) {
             viewport={{ once: true }}
             className='relative w-[144px] h-[88px] xl:w-[192px] xl:h-[104px]'
         >
-            <Image src={plc}
+            {/* <Img src={`/${urlFor(companyImage).url()}`} */}
+            <Img src={`${urlFor(companyImage).url()}`}
                 alt="Picture of the author"
                 layout='fill'
                 className='absolute object-cover object-center rounded-xl'
@@ -24,30 +38,25 @@ export default function ExpCard({}: Props) {
         </motion.div>
         <div className='px-0 md:px-10 flex flex-col space-y-4'>
             <div className='flex flex-col'>
-                <h4 className='text-center text-2xl md:text-4xl font-light'>POSITION OF COMPANY</h4>
-                <p className='text-center font-bold text-lg md:text-2xl mt-1'>COMPANY NAME</p>
+                <h4 className='text-center text-2xl md:text-4xl font-light'>{jobTitle}</h4>
+                <p className='text-center font-bold text-lg md:text-2xl mt-1'>{company}</p>
             </div>
-            <div className='flex space-x-2 my-2 justify-center'>
-                {/* logo */}
-                <div className='h-10 w-10 rounded-full bg-red-600'/>
-                <div className='h-10 w-10 rounded-full bg-red-600'/>
-                <div className='h-10 w-10 rounded-full bg-red-600'/>
-                <div className='h-10 w-10 rounded-full bg-red-600'/>
-            </div>
+            {/* <div className='flex space-x-2 my-2 justify-center'>
+                {skills.map((skill, i)=>(
+                    <div key={i} className='h-10 w-10 rounded-full bg-red-600'/>
+                ))}
+            </div> */}
             <div className='grid md:grid-cols-2'>
-                <p className='uppercase text-center space-y-5 ml-5'>Started - {'03/04/2020'}</p>
-                <p className='uppercase text-center space-y-5 ml-5'>Ended - {'07/16/2020'}</p>
+                <p className='uppercase text-center space-y-5 ml-5'>Started - {`${dateStarted}`}</p>
+                <p className='uppercase text-center space-y-5 ml-5'>Ended - {`${dateEnded}`}</p>
             </div>
             <ul className='keyLearnings h-full justify-center'>
-                    <li className='keyL'>key learnings key learnings key learnings </li>
-                    <li className='keyL'>key learnings key learnings key learnings </li>
-                    <li className='keyL'>key learnings key learnings key learnings </li>
-                    <li className='keyL'>key learnings key learnings key learnings </li>
-                    <li className='keyL'>key learnings key learnings key learnings </li>
-                    <li className='keyL'>key learnings key learnings key learnings </li>
+                {keyLearnings.map((keyL, i) => (
+                    <li key={i} className='keyL'>{keyL}</li>
+                ))}
                 </ul>
         </div>
         </div>
     </article>
-  )
+    )
 }
