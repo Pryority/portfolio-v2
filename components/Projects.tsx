@@ -67,17 +67,17 @@ export default function Projects({projects}: Props) {
                             <a href={`/`} className='px-4 py-2 flex w-full text-center justify-center rounded bg-lime-500 font-medium tracking-wider uppercase hover:opacity-90 hover:bg-lime-600 hover:text-stone-50 cursor-pointer'>View</a>
                         </div>
                     </div>
-                    <div className='flex flex-col items-center justify-center absolute h-screen w-full bg-black/30 z-50'>
-                    <div className='p-4'>
-                        <div className='flex flex-col items-start rounded bg-white text-black space-y-4 text-start p-4 justify-center h-full w-full'>
-                            <p className='font-medium text-2xl'>{project.title}</p>
-                            <p className='overflow-auto'>{project.summary}</p>
-                            <div className='flex w-full justify-center pt-4'>
-                                <div className='bg-lime-500 px-4 justify-center text-center py-1 rounded w-1/3'>Back</div>
+                    {/* <div className='flex flex-col items-center justify-center absolute h-screen w-full bg-black/30 z-50'>
+                        <div className='p-4'>
+                            <div className='flex flex-col items-start rounded bg-white text-black space-y-4 text-start p-4 justify-center h-full w-full'>
+                                <p className='font-medium text-2xl'>{project.title}</p>
+                                <p className='overflow-auto'>{project.summary}</p>
+                                <div className='flex w-full justify-center pt-4'>
+                                    <div className='bg-lime-500 px-4 justify-center text-center py-1 rounded w-1/3'>Back</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-        </div>
+                    </div> */}
                 </motion.div>
             ))}
         </div>
