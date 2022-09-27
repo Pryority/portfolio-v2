@@ -17,8 +17,6 @@ type Props = {
 export default function ExpCard(
         {jobTitle, company, companyImage, dateStarted, dateEnded, keyLearnings, skills }: Props
     ) {
-        // CURRENTLY UNDEFINED 
-        console.log('IMAGE ========', skills)
     return (
     <article className='expCard'>
         <div className='flex flex-col items-center space-y-4'>

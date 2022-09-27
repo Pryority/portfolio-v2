@@ -7,7 +7,6 @@ type Props = {
   experiences: Experience[]
 }
 export default function WorkExperience({experiences}: Props) {
-  console.log('EXPERIENCE:', experiences)
   return (
     <div className='vwrap'>
         <h3 className='sectionTitle'>
