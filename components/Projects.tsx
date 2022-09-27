@@ -28,11 +28,11 @@ export default function Projects({projects}: Props) {
                         viewport={{ once: true }}
                         className='pt-20'
                     >
-                    <div className='w-[208px] h-[104px] relative'>
+                    <div className='w-[208px] h-[104px] md:w-[240px] md:h-[160px] relative'>
                         <Image src={urlFor(project?.demoImage).url()}
                                 alt="Picture of the author"
                                 layout='fill'
-                                className='fullImg rounded-sm'
+                                className='projectImg rounded-sm'
                             />
                     </div>
                     </motion.div>
@@ -64,20 +64,9 @@ export default function Projects({projects}: Props) {
                             {project.summary}
                         </p>
                         <div className='flex w-1/5 justify-center items-center'>
-                            <a href={`/`} className='px-4 py-2 flex w-full text-center justify-center rounded bg-lime-500 font-medium tracking-wider uppercase hover:opacity-90 hover:bg-lime-600 hover:text-stone-50 cursor-pointer'>View</a>
+                            <a href={`/`} className='px-4 py-2 flex w-[64px] md:w-[80px] text-center justify-center rounded bg-lime-500 font-medium tracking-wider uppercase hover:opacity-90 hover:bg-lime-600 hover:text-stone-50 cursor-pointer'>View</a>
                         </div>
                     </div>
-                    {/* <div className='flex flex-col items-center justify-center absolute h-screen w-full bg-black/30 z-50'>
-                        <div className='p-4'>
-                            <div className='flex flex-col items-start rounded bg-white text-black space-y-4 text-start p-4 justify-center h-full w-full'>
-                                <p className='font-medium text-2xl'>{project.title}</p>
-                                <p className='overflow-auto'>{project.summary}</p>
-                                <div className='flex w-full justify-center pt-4'>
-                                    <div className='bg-lime-500 px-4 justify-center text-center py-1 rounded w-1/3'>Back</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
                 </motion.div>
             ))}
         </div>

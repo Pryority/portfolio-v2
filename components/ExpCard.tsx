@@ -38,23 +38,20 @@ export default function ExpCard(
         </motion.div>
         <div className='px-0 md:px-10 flex flex-col space-y-4'>
             <div className='flex flex-col'>
-                <h4 className='text-center text-2xl md:text-4xl font-light'>{jobTitle}</h4>
+                <h4 className='text-center text-2xl md:text-4xl font-light mx-8'>{jobTitle}</h4>
                 <p className='text-center font-bold text-lg md:text-2xl mt-1'>{company}</p>
             </div>
-            {/* <div className='flex space-x-2 my-2 justify-center'>
-                {skills.map((skill, i)=>(
-                    <div key={i} className='h-10 w-10 rounded-full bg-red-600'/>
-                ))}
-            </div> */}
-            <div className='grid md:grid-cols-2'>
-                <p className='uppercase text-center space-y-5 ml-5'>Started - {`${dateStarted}`}</p>
-                <p className='uppercase text-center space-y-5 ml-5'>Ended - {`${dateEnded}`}</p>
+            <div className='grid md:grid-cols-2 justify-center md:w-full mr-16'>
+                <p className='uppercase text-end md:text-center space-y-5 ml-5'>Started - {`${dateStarted}`}</p>
+                <p className='uppercase text-end md:text-center space-y-5 ml-5'>Ended - {`${dateEnded}`}</p>
             </div>
-            <ul className='keyLearnings h-full justify-center'>
+            <div className='flex w-full items-center h-full justify-center'>
+            <ul className='keyLearnings'>
                 {keyLearnings.map((keyL, i) => (
                     <li key={i} className='keyL'>{keyL}</li>
-                ))}
-                </ul>
+                    ))}
+            </ul>
+                    </div>
         </div>
         </div>
     </article>

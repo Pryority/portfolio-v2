@@ -15,20 +15,17 @@
   .heroLinks {
     @apply pt-8 grid grid-cols-2 md:grid-cols-4 w-full lg:grid-cols-8 gap-1 justify-center items-center;
   }
-  /* .expLogo {
-    @apply;
-  } */
   .exp {
     @apply h-screen flex relative overflow-hidden flex-col md:text-left md:flex-row max-w-full justify-evenly mx-auto items-center snap-center;
   }
   .expCard {
-    @apply flex flex-col rounded-lg justify-between items-center space-y-8 flex-shrink-0 md:w-[500px] snap-center bg-[#292929] py-8 lg:hover:opacity-100 lg:opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden;
+    @apply flex flex-col w-2/3 rounded-lg justify-between items-center space-y-8 flex-shrink-0 md:w-[500px] snap-center bg-[#292929] py-8 lg:hover:opacity-100 lg:opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden;
   }
   .expCardList {
     @apply w-full p-8 mx-8 pt-48 h-[800px] md:h-[700px] flex space-x-5 overflow-x-scroll snap-x snap-mandatory scrollbar-thin md:scrollbar-track-gray-400/20 md:scrollbar-thumb-lime-800/80;
   }
   .keyLearnings {
-    @apply list-disc space-y-[1.62px] ml-5 text-sm overflow-y-scroll no-scroll;
+    @apply list-disc space-y-[1.62px] text-sm w-full mx-8 items-start flex flex-col;
   }
   .sectionTitle {
     @apply absolute ml-4 justify-center top-24 text-center uppercase tracking-[20px] text-gray-500 text-2xl;
@@ -37,7 +34,10 @@
     @apply flex flex-col h-screen relative overflow-hidden text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0;
   }
   .fullImg {
-    @apply object-cover object-center xl:w-[200px] xl:h-[200px];
+    @apply object-cover object-center;
+  }
+  .projectImg {
+    @apply object-cover object-center md:w-[200px] md:h-[200px];
   }
   .project {
     @apply w-screen relative flex-shrink-0 snap-center text-white flex flex-col space-y-5 items-center justify-between p-32 md:p-44 h-full;
