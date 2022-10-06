@@ -4,7 +4,10 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['upload.wikimedia.org', 'cdn.sanity.io']
-  }
+  },
+  env: {
+    SERVER: process.env.SERVER,
+  },
 }
 
 module.exports = nextConfig
