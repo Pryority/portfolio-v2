@@ -24,6 +24,25 @@ type Props = {
   skills: Skill[];
   socials: Social[];
 }
+ 
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const pageInfo: PageInfo = await fetchPageInfo();
+  const experiences: Experience[] = await fetchExperience();
+  const skills: Skill[] = await fetchSkills();
+  const projects: Project[] = await fetchProjects();
+  const socials: Social[] = await fetchSocials();
+
+  return {
+    props: {
+      pageInfo,
+      experiences,
+      skills,
+      projects,
+      socials
+    },
+    revalidate: 10
+  }
+}
 
 const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
   return (
@@ -58,40 +77,8 @@ const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
         <Contact />
       </section>
       {/* ------------------------------ */}
-      <Link href={'#hero'}>
-        <footer className='sticky bottom-2 w-full cursor-pointer z-30'>
-          <div className='flex items-center justify-center'>
-            <div className='w-10 h-10 filter grayscale hover:grayscale-0 cursor-pointer'>
-              <Image src={headshot}
-                alt="Picture of the author"
-                layout='fill'
-                className='object-cover rounded-full'
-              />
-            </div>
-          </div>
-        </footer>
-      </Link>
     </div>
   )
 }
 
 export default Home
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: PageInfo = await fetchPageInfo();
-  const experiences: Experience[] = await fetchExperience();
-  const skills: Skill[] = await fetchSkills();
-  const projects: Project[] = await fetchProjects();
-  const socials: Social[] = await fetchSocials();
-
-  return {
-    props: {
-      pageInfo,
-      experiences,
-      skills,
-      projects,
-      socials
-    },
-    revalidate: 10
-  }
-}
