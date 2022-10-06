@@ -1,4 +1,4 @@
-import type { GetStaticProps } from 'next'
+import type { GetStaticProps, GetStaticPaths } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
@@ -78,7 +78,7 @@ const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
 export default Home
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: PageInfo = await JSON.parse(JSON.stringify(fetchPageInfo()));
+  const pageInfo: PageInfo = await fetchPageInfo();
   const experiences: Experience[] = await fetchExperience();
   const skills: Skill[] = await fetchSkills();
   const projects: Project[] = await fetchProjects();
@@ -92,6 +92,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       projects,
       socials
     },
-    revalidate: 60
+    revalidate: 10
   }
 }
