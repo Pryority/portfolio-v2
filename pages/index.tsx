@@ -1,4 +1,4 @@
-import type { GetStaticProps } from 'next'
+import type { GetStaticProps, GetStaticPaths } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
