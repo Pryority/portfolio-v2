@@ -3,9 +3,10 @@ import { server } from './config'
 
 export const fetchPageInfo = async () => {
     const res =  await fetch(`${server}/api/getExperience`)
-    console.log('RES----------',res)
+    console.log(server)
+    // console.log('RES----------',res)
     const data = await res.json()
-    console.log('DATA----------',data)
+    // console.log('DATA----------',data)
     const pageInfo: PageInfo = data
 
     return pageInfo
