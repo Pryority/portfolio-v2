@@ -1,7 +1,8 @@
 import { Project } from '../typings'
+import { server } from './config'
 
 export const fetchProjects = async () => {
-    const res = await fetch(`${process.env.SERVER}/api/getProjects`)
+    const res = await fetch(`${server}/api/getProjects`)
     const data = await res.json()
     const projects: Project[] = data.projects
 

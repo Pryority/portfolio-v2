@@ -1,7 +1,8 @@
 import { Social } from '../typings'
+import { server } from './config'
 
 export const fetchSocials = async () =>  {
-    const res = await fetch(`${process.env.SERVER}/api/getSocials`)
+    const res = await fetch(`${server}/api/getSocials`)
     const data = await res.json()
     const socials: Social[] = data.socials
 
