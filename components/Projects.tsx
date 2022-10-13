@@ -20,13 +20,14 @@ export default function Projects({projects}: Props) {
                     transition={{ duration: 1.2 }}
                     viewport={{ once: true }}
                     key={i} 
-                    className='flex flex-col w-screen flex-shrink-0 snap-center space-y-5 items-center justify-center p-8 md:p-32 h-screen'>
+                    className='flex flex-col w-screen flex-shrink-0 snap-center h-screen space-y-5 items-center justify-center p-8 md:pt-40'>
+                    <div className='flex flex-col items-center h-full space-y-4 md:space-y-6 px-0 max-w-xl justify-end'>
                     <motion.div
                         initial={{ opacity: 0, y: 100 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.62 }}
                         viewport={{ once: true }}
-                        className='pt-20'
+                        className=''
                     >
                     <div className='w-[208px] h-[104px] md:w-[240px] md:h-[160px] relative'>
                         <Image src={urlFor(project?.demoImage).url()}
@@ -36,10 +37,9 @@ export default function Projects({projects}: Props) {
                             />
                     </div>
                     </motion.div>
-                    <div className='flex flex-col items-center space-y-4 md:space-y-6 px-0 max-w-xl'>
                         <h4 className='text-2xl md:text-4xl font-semibold text-center'> 
                             <span className='ul-gr'>
-                                Case Study {i + 1} of {projects.length}:
+                                {i + 1} of {projects.length}:
                             </span>{" "}
                             {project.title}
                         </h4>
@@ -60,11 +60,13 @@ export default function Projects({projects}: Props) {
                         ))}
                         </div>
 
-                        <p className='text-xs tracking-wide md:leading-5 md:text-md text-center md:text-left md:px-4'>
-                            {project.summary}
-                        </p>
+                        <div className='flex overflow-auto justify-center items-start md:w-4/5 h-1/3 md:h-2/3 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-lime-800/80'>
+                            <p className='text-base leading-5 tracking-wide md:leading-7 md:text-md text-center md:text-left md:text-xl md:px-4 pr-4'>
+                                {project.summary}
+                            </p>
+                        </div>
                         <div className='flex w-1/5 justify-center items-center'>
-                            <a href={`/`} className='px-4 py-2 flex w-[64px] md:w-[80px] text-center justify-center rounded bg-lime-500 font-medium tracking-wider uppercase hover:opacity-90 hover:bg-lime-600 hover:text-stone-50 cursor-pointer'>View</a>
+                            <a href={`${project.link}`} className='px-4 py-2 flex w-[64px] md:w-[80px] text-center justify-center rounded bg-lime-500 font-medium tracking-wider uppercase hover:opacity-90 hover:bg-lime-600 hover:text-stone-50 cursor-pointer'>View</a>
                         </div>
                     </div>
                 </motion.div>
