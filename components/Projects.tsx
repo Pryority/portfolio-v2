@@ -22,7 +22,7 @@ export default function Projects({projects}: Props) {
                     key={i} 
                     className='flex flex-col w-screen flex-shrink-0 snap-center h-screen space-y-5 items-center justify-center p-8 md:pt-40'
                 >
-                    <div className='flex flex-col lg:flex-row lg:space-y-0 lg:space-x-8 items-center h-full space-y-4 md:space-y-6 px-0 max-w-xl lg:max-w-4xl justify-center'>
+                    <div className='flex flex-col lg:flex-row lg:space-y-0 lg:space-x-8 items-center h-full space-y-4 md:space-y-6 px-0 max-w-xl lg:max-w-7xl justify-center'>
                         <div className='flex flex-col w-full space-y-4 justify-center items-center pt-24 lg:pt-0'>
                             <motion.div
                                 initial={{ opacity: 0, y: 100 }}
@@ -70,8 +70,8 @@ export default function Projects({projects}: Props) {
                             </div>
                     </div>
 
-                    <div className='flex overflow-auto justify-center items-start w-5/6 lg:w-full h-1/4 md:h-2/3 lg:h-5/6 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-lime-800/80'>
-                            <p className='text-sm leading-5 tracking-wide md:leading-7 md:text-md text-left md:text-left md:text-xl md:px-4 pr-4 lg:leading-6 lg:tracking-wider'>
+                    <div className='flex overflow-auto justify-center items-start w-5/6 lg:w-full scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-lime-800/80'>
+                            <p className='text-sm leading-5 tracking-wide md:leading-7 md:text-md text-left md:text-left md:text-xl md:px-4 pr-4 lg:leading-8 lg:tracking-wider'>
                                 {project.summary}
                             </p>
                     </div>
