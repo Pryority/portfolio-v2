@@ -46,7 +46,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
 const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
   return (
-    <div className='bg-[rgb(36,36,36)] text-white h-screen p-2 snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar md:scrollbar-track-gray-400/20 md:scrollbar-thumb-lime-500/80'>
+    <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar md:scrollbar-track-gray-400/20 md:scrollbar-thumb-lime-500/80'>
       <Head>
         <title>{"Matt's Portfolio"}</title>
       </Head>

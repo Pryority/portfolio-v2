@@ -20,9 +20,10 @@ export default function Projects({projects}: Props) {
                     transition={{ duration: 1.2 }}
                     viewport={{ once: true }}
                     key={i} 
-                    className='flex flex-col w-screen flex-shrink-0 snap-center h-screen space-y-5 items-center justify-center p-8 md:pt-40'>
+                    className='flex flex-col w-screen flex-shrink-0 snap-center h-screen space-y-5 items-center justify-center p-8 md:pt-40'
+                >
                     <div className='flex flex-col lg:flex-row lg:space-y-0 lg:space-x-8 items-center h-full space-y-4 md:space-y-6 px-0 max-w-xl lg:max-w-4xl justify-center'>
-                        <div className='flex flex-col w-full space-y-4 justify-center items-center pt-40 lg:pt-0'>
+                        <div className='flex flex-col w-full space-y-4 justify-center items-center pt-24 lg:pt-0'>
                             <motion.div
                                 initial={{ opacity: 0, y: 100 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -31,7 +32,7 @@ export default function Projects({projects}: Props) {
                                 className=''
                             >
                                 <a href={`${project.link}`}>
-                                <div className='w-[208px] h-[96px] md:w-[240px] md:h-[160px] lg:w-[450px] lg:h-[250px] relative'>
+                                <div className='w-[250px] h-[120px] object-cover md:w-[240px] md:h-[160px] lg:w-[450px] lg:h-[250px] relative'>
                                         <Image src={urlFor(project?.demoImage).url()}
                                                 alt="Picture of the author"
                                                 layout='fill'
@@ -69,21 +70,21 @@ export default function Projects({projects}: Props) {
                             </div>
                     </div>
 
-                    <div className='flex overflow-auto justify-center items-start md:w-4/5 lg:w-full h-1/5 md:h-2/3 lg:h-5/6 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-lime-800/80'>
+                    <div className='flex overflow-auto justify-center items-start w-5/6 lg:w-full h-1/4 md:h-2/3 lg:h-5/6 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-lime-800/80'>
                             <p className='text-sm leading-5 tracking-wide md:leading-7 md:text-md text-left md:text-left md:text-xl md:px-4 pr-4 lg:leading-6 lg:tracking-wider'>
                                 {project.summary}
                             </p>
-                        </div>
                     </div>
-                        <div className='flex w-1/5 justify-center items-center pb-8'>
-                            <a href={`${project.link}`} className='px-4 py-2 flex w-[64px] md:w-[80px] text-center justify-center rounded bg-lime-500 font-medium tracking-wider uppercase hover:opacity-90 hover:bg-lime-600 hover:text-stone-50 cursor-pointer'>View</a>
-                        </div>
-                </motion.div>
+
+                </div>
+                <div className='flex w-1/5 justify-center items-center pb-8'>
+                    <a href={`${project.link}`} className='view-btn'>View</a>
+                </div>
+            </motion.div>
             ))}
         </div>
         {/* SKEW BG */}
         <div className='w-full absolute top-[30%] bg-[#8fe821]/10 left-0 h-[500px] -skew-y-12'/>
-        
     </div>
 
   )
