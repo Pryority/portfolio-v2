@@ -9,7 +9,7 @@ type Props = {
 export default function WorkExperience({experiences}: Props) {
   return (
     <div className='vwrap'>
-        <h3 className='sectionTitle'>
+        <h3 className='absolute ml-4 justify-center top-24 text-center uppercase tracking-[18px] text-gray-500 text-2xl'>
             Experience
         </h3>
         <motion.div 

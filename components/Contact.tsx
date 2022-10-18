@@ -24,7 +24,7 @@ export default function Contact({}: Props) {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.62 }}
-            className='flex flex-col space-y-10 pt-16 lg:24 justify-center items-center'>
+            className='flex flex-col space-y-4 pt-16 lg:24 justify-center items-center'>
             <motion.div 
             initial={{ y: -25, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -40,18 +40,18 @@ export default function Contact({}: Props) {
                 initial={{ y: -10, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1.62 }}
-                className='space-y-2 justify-center items-center flex flex-col'>
+                className='space-y-1 justify-center items-center flex flex-col'>
                 <div className='flex items-center space-x-4'>
                     <PhoneIcon className='text-lime-500 h-7 w-7 animate-pulse' />
-                    <p className='text-lg md:text-2xl'>+1 647-705-7708</p>
+                    <p className='text-md md:text-2xl'>+1 647-705-7708</p>
                 </div>
                 <div className='flex items-center space-x-4'>
                     <EnvelopeIcon className='text-lime-500 h-7 w-7 animate-pulse' />
-                    <p className='text-lg md:text-2xl'>matthewapryor@gmail.com</p>
+                    <p className='text-md md:text-2xl'>matthewapryor@gmail.com</p>
                 </div>
                 <div className='flex items-center space-x-4'>
                     <MapPinIcon className='text-lime-500 h-7 w-7 animate-pulse' />
-                    <p className='text-lg md:text-2xl'>Toronto, Ontario</p>
+                    <p className='text-md md:text-2xl'>Toronto, Ontario</p>
                 </div>
             </motion.div>
 

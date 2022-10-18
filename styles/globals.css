@@ -19,19 +19,19 @@
     @apply h-screen flex relative overflow-hidden flex-col md:text-left md:flex-row max-w-full justify-evenly mx-auto items-center snap-center;
   }
   .expCard {
-    @apply flex flex-col w-4/5 rounded-lg justify-between items-center space-y-8 flex-shrink-0 md:w-[500px] snap-center bg-[#292929] py-8 lg:hover:opacity-100 lg:opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden;
+    @apply flex flex-col w-full rounded-lg justify-between items-center space-y-8 flex-shrink-0 md:w-[500px] snap-center bg-[#292929] lg:hover:opacity-100 lg:opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden;
   }
   .expCardList {
-    @apply w-full p-8 mx-8 pt-48 h-[800px] md:h-[700px] flex space-x-5 overflow-x-scroll snap-x snap-mandatory scrollbar-thin md:scrollbar-track-gray-400/20 md:scrollbar-thumb-lime-800/80;
+    @apply w-full p-4 mx-4 pt-48 md:pt-40 h-[800px] md:h-[800px] flex space-x-5 overflow-x-scroll snap-x snap-mandatory scrollbar-thin md:scrollbar-track-gray-400/20 md:scrollbar-thumb-lime-800/80;
   }
   .keyLearnings {
-    @apply list-disc text-[12px] md:text-[16px] leading-4 md:leading-[1.34] space-y-2 h-[144px] md:h-full w-full mx-8 px-4 items-start flex flex-col overflow-y-scroll md:overflow-hidden scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-lime-800/80;
+    @apply text-[12px] md:text-[16px] leading-4 md:leading-[1.34] space-y-2 h-[144px] md:h-[250px] w-5/6 list-none px-4 items-start flex flex-col overflow-y-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-lime-800/80;
   }
   .sectionTitle {
     @apply absolute ml-4 justify-center top-24 text-center uppercase tracking-[20px] text-gray-500 text-2xl;
   }
   .vwrap {
-    @apply flex flex-col h-screen relative overflow-hidden text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0;
+    @apply flex flex-col h-screen relative overflow-hidden text-left md:flex-row md:max-w-5xl max-w-full justify-evenly items-center z-0;
   }
   .fullImg {
     @apply object-cover object-center;
@@ -55,7 +55,7 @@
     @apply absolute object-cover;
   }
   .pr-t-lg {
-    @apply text-3xl md:text-4xl font-semibold text-center;
+    @apply text-lg md:text-4xl font-semibold text-center;
   }
   .contact-input {
     @apply outline-none bg-slate-400/10 rounded-sm border-b px-4 py-2 md:px-6 md:py-4 border-[#242424] text-gray-400 transition-all focus:border-lime-500/40 focus:text-lime-500 hover:border-lime-500 justify-center items-center text-start w-full;
