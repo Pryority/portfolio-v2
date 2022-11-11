@@ -1,21 +1,21 @@
-import type { GetStaticProps, GetStaticPaths } from 'next'
-import Link from 'next/link'
-import Image from 'next/image'
-import Head from 'next/head'
-import About from '../components/About'
-import Contact from '../components/Contact'
-import headshot from '../assets/matt.jpg'
-import WorkExperience from '../components/Experience'
-import Header from '../components/Header'
-import Hero from '../components/Hero'
-import Projects from '../components/Projects'
-import Skills from '../components/Skills'
-import { PageInfo, Experience, Project, Skill, Social } from '../typings'
-import { fetchPageInfo } from '../utils/fetchPageInfo'
-import { fetchExperience } from '../utils/fetchExperience'
-import { fetchSkills } from '../utils/fetchSkills'
-import { fetchProjects } from '../utils/fetchProjects'
-import { fetchSocials } from '../utils/fetchSocials'
+import type { GetStaticProps, GetStaticPaths } from "next";
+import Link from "next/link";
+import Image from "next/image";
+import Head from "next/head";
+import About from "../components/About";
+import Contact from "../components/Contact";
+import headshot from "../assets/matt.jpg";
+import WorkExperience from "../components/Experience";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Projects from "../components/Projects";
+import Skills from "../components/Skills";
+import { PageInfo, Experience, Project, Skill, Social } from "../typings";
+import { fetchPageInfo } from "../utils/fetchPageInfo";
+import { fetchExperience } from "../utils/fetchExperience";
+import { fetchSkills } from "../utils/fetchSkills";
+import { fetchProjects } from "../utils/fetchProjects";
+import { fetchSocials } from "../utils/fetchSocials";
 
 type Props = {
   pageInfo: PageInfo;
@@ -41,8 +41,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       socials
     },
     revalidate: 10
-  }
-}
+  };
+};
 
 const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
   return (
@@ -78,7 +78,7 @@ const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
       </section>
       {/* ------------------------------ */}
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
