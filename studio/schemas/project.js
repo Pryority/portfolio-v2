@@ -10,6 +10,12 @@ export default {
       type: 'string',
     },
     {
+      name: 'status',
+      title: 'Status',
+      description: 'Project Status',
+      type: 'string',
+    },
+    {
       name: 'demoImage',
       title: 'DemoImage',
       type: 'image',
