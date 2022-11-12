@@ -50,10 +50,11 @@ export default function Header({socials}: Props) {
         transition={{
           duration: 1.5
         }}
+        className='md:px-4'
       >
         <SocialIcon url='mailto:matthewapryor@gmail.com' network='email' fgColor='gray' bgColor='transparent'/>
         <p className='uppercase hidden md:inline-flex text-sm text-gray-500'>
-                Get in touch
+          Get in touch
         </p>
       </motion.div>
     </header>
