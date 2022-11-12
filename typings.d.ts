@@ -8,21 +8,21 @@ interface SanityBody {
 }
 
 export interface Social extends SanityBody {
-    _type: 'social';
+    _type: "social";
     title: string;
     url: string;
 }
 
 interface Image {
-    _type: 'image';
+    _type: "image";
     asset: {
         _ref: string;
-        _type: 'reference'
+        _type: "reference"
     }
 }
 
 export interface PageInfo extends SanityBody {
-    _type: 'pageInfo';
+    _type: "pageInfo";
     name: string;
     role: string;
     mainImage: Image;
@@ -34,14 +34,14 @@ export interface PageInfo extends SanityBody {
 }
 
 export interface Skill extends SanityBody {
-    _type: 'skill';
+    _type: "skill";
     image: Image;
     progress: number;
     title: string;
 }
 
 export interface Experience extends SanityBody {
-    _type: 'experience';
+    _type: "experience";
     jobTitle: string;
     companyImage: Image;
     company: string;
@@ -53,7 +53,7 @@ export interface Experience extends SanityBody {
 }
 
 export interface Project extends SanityBody {
-    _type: 'project';
+    _type: "project";
     status: string;
     title: string;
     demoImage: Image;

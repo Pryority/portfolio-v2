@@ -22,7 +22,7 @@ export default function Projects({projects}: Props) {
             key={i} 
             className='flex flex-col w-screen flex-shrink-0 snap-center h-screen space-y-5 items-center justify-center px-6 md:px-0 pt-6 md:pt-16'
           >
-            <div className='flex flex-col md:flex-row lg:space-y-0 items-center h-full space-y-4 md:space-y-6 px-0 max-w-xl md:max-w-2xl lg:max-w-5xl w-full justify-center'>
+            <div className='flex flex-col md:flex-row lg:space-y-0 items-center h-full space-y-4 md:space-x-6 px-0 max-w-xl md:max-w-2xl lg:max-w-5xl w-full justify-center'>
               <div className='flex flex-col w-full space-y-4 justify-center items-center pt-24 lg:pt-0'>
                 {/* -↓- IMAGE -↓- */}
                 <motion.div
@@ -66,7 +66,7 @@ export default function Projects({projects}: Props) {
                   {project.skills.map((skill, i)=> (
                     <div key={skill._id} className='flex flex-col'>
                       <div                                     
-                        className='w-[32px] h-[32px] md:w-[48px] md:h-[48px] relative border-[0.62px] border-[#fffa] rounded-full'
+                        className='w-[32px] h-[32px] md:w-[56px] md:h-[48px] relative border-[0.62px] border-[#fffa] rounded-full'
                       >
                         <Image 
                           src={urlFor(skill.image).url()} 
@@ -84,9 +84,9 @@ export default function Projects({projects}: Props) {
 
               {/* -↓- SUMMARY -↓- */}
               <div className="md:p-2">
-                <div className='flex flex-col justify-center items-center space-y-8 h-[200px] sm:h-[200px] md:h-4/5 lg:max-h-[600px] text-slate-100 bg-black/70 md:bg-black/90 backdrop-blur-md p-3 md:p-4 rounded-sm border border-slate-600/50'>
+                <div className='flex flex-col justify-center items-center space-y-8 max-h-[200px] md:h-fit md:max-h-[350px] lg:max-h-[450px] text-slate-100 bg-black/70 md:bg-black/90 backdrop-blur-md p-3 md:p-4 rounded-sm border border-slate-600/50'>
                   <div className='flex overflow-auto justify-center items-start lg:w-full h-full scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-lime-800/80'>
-                    <div>
+                    <div className="flex flex-col items-center h-full">
                       <p className='text-sm leading-5 tracking-wider md:text-md text-left md:text-left md:text-xl lg:leading-8 lg:tracking-wider'>
                         {project.summary}
                       </p>
