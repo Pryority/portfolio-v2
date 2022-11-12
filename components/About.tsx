@@ -16,7 +16,7 @@ export default function About({}: Props) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
-          className="flex flex-col relative text-center md:text-left md:flex-row max-w-lg md:max-w-2xl lg:max-w-4xl md:px-4 justify-start mx-auto items-center space-y-4 h-full">
+          className="flex flex-col relative text-left text-xs md:text-left md:flex-row max-w-lg md:max-w-2xl lg:max-w-4xl md:px-4 justify-start mx-auto items-center space-y-4 h-full">
           <motion.div
             initial={{
               y: 50,
@@ -40,7 +40,7 @@ export default function About({}: Props) {
             <h4 className="text-2xl md:text-4xl font-semibold">
                     A{" "}<span className="ul-gr-2">little</span>{" "}bit about me
             </h4>
-            <div className="text-14px md:text-[16px] lg:text-[20px] leading-[1.34] md:text-left tracking-wider md:tracking-wide flex flex-col space-y-2 overflow-y-scroll h-[2/5] pb-64 md:h-full md:w-full scrollbar-thin scrollbar-track-gray-400/20 p-4 md:p-0 scrollbar-thumb-lime-800/80 md:scrollbar-none">
+            <div className="text-14px md:text-[16px] lg:text-[20px] leading-[1.62] md:text-left tracking-wider md:tracking-wide flex flex-col space-y-2 overflow-y-scroll h-[2/5] pb-64 md:h-full md:w-full scrollbar-thin scrollbar-track-gray-400/20 p-4 md:p-0 scrollbar-thumb-lime-800/80 md:scrollbar-none">
               <p>
                     It is nice to meet you. 
               </p>
