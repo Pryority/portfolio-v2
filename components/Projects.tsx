@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Project as ProjectType } from "../typings";
 import { urlFor } from "../sanity";
+import Link from "next/link";
 
 type Props = {
     projects: ProjectType[]
@@ -23,7 +24,7 @@ export default function Projects({projects}: Props) {
             className='flex flex-col w-screen flex-shrink-0 snap-center h-screen space-y-5 items-center justify-center px-6 md:px-0 pt-6 md:pt-16'
           >
             <div className='flex flex-col md:flex-row lg:space-y-0 items-center h-full space-y-4 md:space-x-6 px-0 max-w-xl md:max-w-2xl lg:max-w-5xl w-full justify-center'>
-              <div className='flex flex-col w-full space-y-4 justify-center items-center pt-24 lg:pt-0'>
+              <div className='flex flex-col w-full space-y-4 justify-center items-center lg:pt-0'>
                 {/* -↓- IMAGE -↓- */}
                 <motion.div
                   initial={{ opacity: 0, y: 100 }}
@@ -65,17 +66,22 @@ export default function Projects({projects}: Props) {
                 <div className='flex space-x-5 justify-center'>
                   {project.skills.map((skill, i)=> (
                     <div key={skill._id} className='flex flex-col'>
-                      <div                                     
-                        className='w-[32px] h-[32px] md:w-[56px] md:h-[48px] relative border-[0.62px] border-[#fffa] rounded-full'
+                      <Link
+                        href={`${project.link}`}     
                       >
-                        <Image 
-                          src={urlFor(skill.image).url()} 
-                          layout='fill'
-                          alt={`Tech ${i+1}`}
-                          objectFit='contain'
-                          className='rounded-full'
-                        />
-                      </div>
+                        <div                                     
+                          className='w-[32px] h-[32px] md:w-[48px] md:h-[48px] relative border-[0.62px] border-[#fffa] rounded-full'
+                        >
+                          <Image 
+                            src={urlFor(skill.image).url()} 
+                            layout='fill'
+                            alt={`Tech ${i+1}`}
+                            objectFit='contain'
+                            className='rounded-full'
+                          />
+                        </div>
+                      </Link>
+                      
                     </div>
                   ))}
                 </div>
