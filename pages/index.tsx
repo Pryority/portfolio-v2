@@ -23,8 +23,8 @@ type Props = {
   projects: Project[];
   skills: Skill[];
   socials: Social[];
-}
- 
+};
+
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
   const experiences: Experience[] = await fetchExperience();
@@ -38,42 +38,42 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       experiences,
       skills,
       projects,
-      socials
+      socials,
     },
-    revalidate: 10
+    revalidate: 10,
   };
 };
 
-const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
+const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
   return (
-    <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar md:scrollbar-track-gray-400/20 md:scrollbar-thumb-lime-500/80'>
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 px-2 md:scrollbar md:scrollbar-track-gray-400/20 md:scrollbar-thumb-slate-300/80">
       <Head>
         <title>{"Matt's Portfolio"}</title>
       </Head>
       {/* ------------------------------ */}
-      <Header socials={socials}/>
+      <Header socials={socials} />
       {/* ------------------------------ */}
-      <section id="hero" className='snap-center'>
+      <section id="hero" className="snap-center">
         <Hero pageInfo={pageInfo} />
       </section>
       {/* ------------------------------ */}
-      <section id='about' className='snap-start'>
+      <section id="about" className="snap-start">
         <About />
       </section>
       {/* ------------------------------ */}
-      <section id='projects' className='snap-start'>
+      <section id="projects" className="snap-start">
         <Projects projects={projects} />
       </section>
       {/* ------------------------------ */}
-      <section id='skills' className='snap-start'>
+      <section id="skills" className="snap-start">
         <Skills skills={skills} />
       </section>
       {/* ------------------------------ */}
-      <section id='experience' className='snap-start'>
+      <section id="experience" className="snap-start">
         <WorkExperience experiences={experiences} />
       </section>
       {/* ------------------------------ */}
-      <section id="contact" className='snap-start'>
+      <section id="contact" className="snap-start">
         <Contact />
       </section>
       {/* ------------------------------ */}

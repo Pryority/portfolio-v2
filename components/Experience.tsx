@@ -4,26 +4,27 @@ import ExpCard from "./ExpCard";
 import { Experience } from "../typings";
 
 type Props = {
-  experiences: Experience[]
-}
-export default function WorkExperience({experiences}: Props) {
+  experiences: Experience[];
+};
+export default function WorkExperience({ experiences }: Props) {
   return (
-    <div className='vwrap'>
-      <h3 className='absolute ml-4 justify-center top-24 text-center uppercase tracking-[18px] text-gray-500 text-2xl'>
-            Experience
+    <div className="vwrap">
+      <h3 className="absolute ml-4 justify-center top-24 text-center uppercase tracking-[20px] text-pink-500/40 text-lg sm:text-2xl">
+        Experience
       </h3>
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
-        className='exp'>
-        <div className='expCardList'>
-          {experiences.map((exp)=> (
-            <ExpCard 
-              key={exp._id} 
-              jobTitle={exp.jobTitle} 
-              company={exp.company} 
-              companyImage={exp.companyImage} 
+        className="exp"
+      >
+        <div className="expCardList">
+          {experiences.map((exp) => (
+            <ExpCard
+              key={exp._id}
+              jobTitle={exp.jobTitle}
+              company={exp.company}
+              companyImage={exp.companyImage}
               dateStarted={exp.dateStarted}
               dateEnded={exp.dateEnded}
               keyLearnings={exp.keyLearnings}
@@ -34,6 +35,5 @@ export default function WorkExperience({experiences}: Props) {
         </div>
       </motion.div>
     </div>
-      
   );
 }

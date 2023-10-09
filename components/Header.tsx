@@ -4,34 +4,34 @@ import { motion } from "framer-motion";
 import { Social } from "../typings";
 
 type Props = {
-    socials: Social[]
-}
+  socials: Social[];
+};
 
-export default function Header({socials}: Props) {
+export default function Header({ socials }: Props) {
   return (
-    <header className='sticky top-0 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center p-5'>
+    <header className="sticky top-8 flex items-start justify-between max-w-7xl  mx-auto z-20 xl:items-center">
       <motion.div
         initial={{
           x: -500,
           opacity: 0,
           scale: 0.5,
-                
         }}
         animate={{
           x: 0,
           opacity: 1,
-          scale: 1
+          scale: 1,
         }}
         transition={{
-          duration: 1.5
-        }}>
+          duration: 1.5,
+        }}
+      >
         <div className="social-icons flex items-center">
           {socials.map((social) => (
-            <SocialIcon 
+            <SocialIcon
               key={social._id}
-              url={social.url} 
-              fgColor='gray' 
-              bgColor='transparent'
+              url={social.url}
+              fgColor="gray"
+              bgColor="transparent"
             />
           ))}
         </div>
@@ -40,20 +40,25 @@ export default function Header({socials}: Props) {
         initial={{
           x: 500,
           opacity: 0,
-          scale: 0.5
+          scale: 0.5,
         }}
         animate={{
           x: 0,
           opacity: 1,
-          scale: 1
+          scale: 1,
         }}
         transition={{
-          duration: 1.5
+          duration: 1.5,
         }}
-        className='md:px-4'
+        className="md:px-4"
       >
-        <SocialIcon url='mailto:matthewapryor@gmail.com' network='email' fgColor='gray' bgColor='transparent'/>
-        <p className='uppercase hidden md:inline-flex text-sm text-gray-500'>
+        <SocialIcon
+          url="mailto:matthewapryor@gmail.com"
+          network="email"
+          fgColor="gray"
+          bgColor="transparent"
+        />
+        <p className="uppercase hidden md:inline-flex text-sm text-gray-500">
           Get in touch
         </p>
       </motion.div>
